@@ -21,6 +21,7 @@
                     <li th:each="field : *{fields}">
 
                         <input type="radio" th:field="*{searchField}" th:value="${field}" th:checked="${field == searchField}"/>
+
                         <label th:for="${#ids.prev('searchField')}" th:text="${field.name}"></label>
 
                     </li>

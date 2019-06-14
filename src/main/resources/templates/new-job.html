@@ -15,9 +15,11 @@
                 <div class="form-group">
 
                     <label th:for="name">Name</label>
+
                     <input th:field="*{name}" />
 
                     <div th:errors="*{name}"></div>
+
                 </div>
 
                 <div class="form-group">
@@ -51,35 +53,35 @@
 
                 </div>
 
-            <div class="form-group">
+                <div class="form-group">
 
-                <label th:for="coreCompetencyId">Skill</label>
+                    <label th:for="coreCompetencyId">Skill</label>
 
-                <select th:field="*{coreCompetencyId}">
+                    <select th:field="*{coreCompetencyId}">
 
-                    <option th:each="coreCompetency : *{coreCompetencies}"
-                        th:value="${coreCompetency.id}"
-                        th:text="${coreCompetency.value}">
-                    </option>
+                        <option th:each="coreCompetency : *{coreCompetencies}"
+                            th:value="${coreCompetency.id}"
+                            th:text="${coreCompetency.value}">
+                        </option>
 
-                </select>
+                    </select>
 
-            </div>
+                </div>
 
-            <div class="form-group">
+                <div class="form-group">
 
-                <label th:for="positionTypeId">Position Type</label>
+                    <label th:for="positionTypeId">Position Type</label>
 
-                <select th:field="*{positionTypeId}">
+                    <select th:field="*{positionTypeId}">
 
-                    <option th:each="positionType : *{positionTypes}"
-                        th:value="${positionType.id}"
-                        th:text="${positionType.value}">
-                    </option>
+                        <option th:each="positionType : *{positionTypes}"
+                            th:value="${positionType.id}"
+                            th:text="${positionType.value}">
+                        </option>
 
-                </select>
+                    </select>
 
-            </div>
+                </div>
 
                 <input type="submit" value="Add Job" />
 
