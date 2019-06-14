@@ -1,46 +1,61 @@
 <!DOCTYPE html>
+
 <html xmlns:th="http://www.thymeleaf.org/">
-<head th:replace="fragments :: head">
-</head>
-<body>
 
-<div th:replace="fragments :: page-header"></div>
+<head th:replace="fragments :: head"></head>
 
-<div class="container body-content">
+    <body>
 
-    <!-- // TODO #2 - display the job fields, one per row -->
-    <div th:each="job: ${jobs}">
-        <table th:fragment="single-job" class="job-listing">
-            <tr>
-                <th>Name</th>
-                <td th:text="${job.name}"></td>
-            </tr>
+        <div th:replace="fragments :: page-header"></div>
 
-            <tr>
-                <th>Employer</th>
-                <td th:text="${job.employer}"></td>
-            </tr>
+        <div class="container body-content">
 
-            <tr>
-                <th>Location</th>
-                <td th:text="${job.location}"></td>
-            </tr>
+            <!-- // TODO #2 - display the job fields, one per row -->
+            <div th:each="job: ${jobs}">
 
-            <tr>
-                <th>Skill</th>
-                <td th:text="${job.coreCompetency}"></td>
-            </tr>
+                <table th:fragment="single-job" class="job-listing">
 
-            <tr>
-                <th>Position Type</th>
-                <td th:text="${job.positionType}"></td>
-            </tr>
+                    <tr>
 
+                        <th>Name</th>
+                        <td th:text="${job.name}"></td>
 
-        </table>
-    </div>
+                    </tr>
 
-</div>
+                    <tr>
 
-</body>
+                        <th>Employer</th>
+                        <td th:text="${job.employer}"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Location</th>
+                        <td th:text="${job.location}"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Skill</th>
+                        <td th:text="${job.coreCompetency}"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th>Position Type</th>
+                        <td th:text="${job.positionType}"></td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </body>
+
 </html>

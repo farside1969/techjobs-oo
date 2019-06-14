@@ -29,7 +29,6 @@ public class Job {
         location = aLocation;
         positionType = aPositionType;
         coreCompetency = aSkill;
-
     }
 
     public String getName() {

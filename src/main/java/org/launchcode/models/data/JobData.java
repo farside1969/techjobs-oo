@@ -56,7 +56,6 @@ public class JobData {
         return matchingJobs;
     }
 
-
     public ArrayList<Job> findByValue(String value) {
 
         ArrayList<Job> matchingJobs = new ArrayList<>();

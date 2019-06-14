@@ -37,5 +37,4 @@ public class JobFieldData<T extends JobField> {
 
         return null;
     }
-
 }

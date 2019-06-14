@@ -20,5 +20,4 @@ public enum JobFieldType {
     public String getName() {
         return name;
     }
-
 }

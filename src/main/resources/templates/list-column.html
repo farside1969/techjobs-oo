@@ -1,30 +1,39 @@
 <!DOCTYPE html>
+
 <html xmlns:th="http://www.thymeleaf.org/">
-<head th:replace="fragments :: head">
-</head>
-<body>
 
-<div th:replace="fragments :: page-header"></div>
+<head th:replace="fragments :: head"></head>
 
-<div class="container body-content">
+    <body>
 
-    <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
+        <div th:replace="fragments :: page-header"></div>
 
-    <div th:unless="${items} and ${items.size()}">
-        <h2>No Results</h2>
-    </div>
+        <div class="container body-content">
 
-    <div th:if="${items} and ${items.size()}">
+            <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
-        <table>
-            <tr th:each="item, idx : ${items}" th:class="${idx.odd} ? 'odd'">
-                <td><a th:href="@{/list/jobs(column=${column},name=${item})}" th:text="${item}"></a></td>
-            </tr>
-        </table>
+            <div th:unless="${items} and ${items.size()}">
 
-    </div>
+                <h2>No Results</h2>
 
-</div>
+            </div>
 
-</body>
+            <div th:if="${items} and ${items.size()}">
+
+                <table>
+
+                    <tr th:each="item, idx : ${items}" th:class="${idx.odd} ? 'odd'">
+
+                        <td><a th:href="@{/list/jobs(column=${column},name=${item})}" th:text="${item}"></a></td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </body>
+
 </html>
