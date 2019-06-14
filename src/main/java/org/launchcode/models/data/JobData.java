@@ -62,7 +62,7 @@ public class JobData {
 
         for (Job job : jobs) {
 
-            if (job.getName().toLowerCase().contains(value)) {
+            if (job.getName().toLowerCase().contains(value.toLowerCase())) {
                 matchingJobs.add(job);
                 continue;
             }
