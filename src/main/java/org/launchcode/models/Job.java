@@ -75,6 +75,8 @@ public class Job {
         return id;
     }
 
+
+//to identify if they are the same or different object
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -85,6 +87,7 @@ public class Job {
         return id == job.id;
     }
 
+//to impliment hashcode with id
     @Override
     public int hashCode() {
         return id;
